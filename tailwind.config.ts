@@ -30,6 +30,8 @@ export default {
 					secondary: '#121214',
 				},
 				accent: {
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))',
 					purple: '#6E56CF',
 					cyan: '#1EEBE7',
 					pink: '#FF5E8F',
@@ -49,10 +51,6 @@ export default {
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
