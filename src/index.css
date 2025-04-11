@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 240 10% 2%;
-    --foreground: 0 0% 95%;
+    --background: 220 20% 18%;
+    --foreground: 220 20% 96%;
 
-    --card: 240 10% 2%;
-    --card-foreground: 0 0% 95%;
+    --card: 220 20% 18%;
+    --card-foreground: 220 20% 96%;
 
-    --popover: 240 10% 2%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 220 20% 18%;
+    --popover-foreground: 220 20% 96%;
 
-    --primary: 0 0% 95%;
-    --primary-foreground: 240 5.9% 8%;
+    --primary: 220 20% 96%;
+    --primary-foreground: 220 20% 18%;
 
-    --secondary: 240 3.7% 12%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 219 21% 31%;
+    --secondary-foreground: 220 20% 96%;
 
-    --muted: 240 3.7% 12%;
-    --muted-foreground: 240 5% 60%;
+    --muted: 219 21% 31%;
+    --muted-foreground: 220 13% 75%;
 
-    --accent: 240 3.7% 12%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 219 21% 31%;
+    --accent-foreground: 220 20% 96%;
 
     --destructive: 0 62.8% 28%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive-foreground: 220 20% 96%;
 
-    --border: 240 3.7% 12%;
-    --input: 240 3.7% 12%;
-    --ring: 240 4.9% 80%;
+    --border: 219 21% 31%;
+    --input: 219 21% 31%;
+    --ring: 210 11% 69%;
 
     --radius: 0.5rem;
   }
@@ -45,11 +45,14 @@
   }
   
   html {
-    @apply scroll-smooth antialiased;
+    @apply antialiased;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow: hidden;
   }
   
   body {
-    @apply bg-dark text-foreground font-sans overflow-x-hidden;
+    @apply bg-dark text-foreground font-sans overflow-hidden h-screen;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -59,11 +62,11 @@
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 10px rgba(25, 199, 195, 0.5);
+    text-shadow: 0 0 10px rgba(155, 164, 181, 0.5);
   }
   
   .glow {
-    filter: drop-shadow(0 0 15px rgba(25, 199, 195, 0.5));
+    filter: drop-shadow(0 0 15px rgba(155, 164, 181, 0.5));
   }
   
   .text-gradient {
@@ -91,5 +94,20 @@
   width: 100%;
   height: 100vh;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.3;
+}
+
+.main-content {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

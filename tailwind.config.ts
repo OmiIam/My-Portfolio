@@ -26,15 +26,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				dark: {
-					DEFAULT: '#0A0A0C', // Darker black
-					secondary: '#0D0D10', // Darker secondary
+					DEFAULT: '#212A3E', // Updated dark color
+					secondary: '#394867', // Updated secondary color
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))',
-					purple: '#5D45BE', // Darker purple
-					cyan: '#19C7C3', // Darker cyan
-					pink: '#E04D7C', // Darker pink
+					purple: '#394867', // Updated purple accent
+					cyan: '#9BA4B5', // Updated cyan accent
+					pink: '#9BA4B5', // Updated pink accent
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
