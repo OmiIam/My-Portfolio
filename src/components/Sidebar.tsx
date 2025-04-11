@@ -1,13 +1,12 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Home, User, Briefcase, FileText, Mail, Menu, X } from 'lucide-react';
+import { Home, User, Briefcase, Mail, Menu, X } from 'lucide-react';
 
 const navItems = [
   { name: 'Home', icon: Home, href: '#home' },
   { name: 'About', icon: User, href: '#about' },
   { name: 'Projects', icon: Briefcase, href: '#projects' },
-  { name: 'Blog', icon: FileText, href: '#blog' },
   { name: 'Contact', icon: Mail, href: '#contact' }
 ];
 
@@ -54,7 +53,7 @@ export default function Sidebar() {
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         <div className="w-10 h-10 rounded-full bg-accent-purple flex items-center justify-center text-white font-space text-lg mb-4">
-          O
+          G
         </div>
         
         <nav className="flex flex-col gap-6">

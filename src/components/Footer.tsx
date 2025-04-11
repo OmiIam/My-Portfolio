@@ -12,7 +12,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-8 px-6 mt-16 border-t border-white/10">
+    <footer className="py-8 px-6 mt-16 border-t border-white/5">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
@@ -22,7 +22,7 @@ export default function Footer() {
               transition={{ delay: 0.2 }}
               className="text-lg font-medium text-gradient mb-2"
             >
-              Omi Iam
+              Godson Igoniwari
             </motion.div>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export default function Footer() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          &copy; {currentYear} Omi Iam. All rights reserved.
+          &copy; {currentYear} Godson Igoniwari. All rights reserved.
         </motion.div>
       </div>
     </footer>

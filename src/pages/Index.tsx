@@ -6,12 +6,10 @@ import DynamicBackground from '@/components/DynamicBackground';
 import Sidebar from '@/components/Sidebar';
 import SectionHeader from '@/components/SectionHeader';
 import ProjectCard from '@/components/ProjectCard';
-import BlogPostCard from '@/components/BlogPostCard';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 
 import { projects } from '@/data/projectsData';
-import { blogPosts } from '@/data/blogData';
 
 const Index = () => {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -58,7 +56,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-white"
           >
-            Omi Iam
+            Godson Igoniwari
           </motion.h1>
 
           <motion.h2
@@ -130,70 +128,50 @@ const Index = () => {
             subtitle="Get to know me better"
           />
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="aspect-square max-w-sm mx-auto md:mx-0 relative">
-                <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmVzc2lvbmFsfGVufDB8fDB8fHww" 
-                    alt="Omi Iam" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-secondary via-transparent to-transparent opacity-60" />
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border-2 border-accent-cyan rounded-2xl -z-10" />
-              </div>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto"
+          >
+            <h3 className="text-2xl font-bold mb-6 text-gradient">
+              Creative Technologist & Problem Solver
+            </h3>
             
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h3 className="text-2xl font-bold mb-6 text-gradient">
-                Creative Technologist & Problem Solver
-              </h3>
-              
-              <div className="space-y-4 text-gray-300">
-                <p>
-                  I'm a Full Stack Developer with over 7 years of experience crafting digital experiences that merge creativity and technology. I specialize in building interactive web applications that are both functional and visually stunning.
-                </p>
-                <p>
-                  My journey began with a background in visual design before transitioning to frontend development. Eventually, I expanded into backend technologies to create end-to-end solutions that address complex challenges.
-                </p>
-                <p>
-                  When I'm not coding, you can find me exploring new creative coding techniques, contributing to open source, or speaking at tech conferences about emerging web technologies.
-                </p>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                I'm a Full Stack Developer with over 7 years of experience crafting digital experiences that merge creativity and technology. I specialize in building interactive web applications that are both functional and visually stunning.
+              </p>
+              <p>
+                My journey began with a background in visual design before transitioning to frontend development. Eventually, I expanded into backend technologies to create end-to-end solutions that address complex challenges.
+              </p>
+              <p>
+                When I'm not coding, you can find me exploring new creative coding techniques, contributing to open source, or speaking at tech conferences about emerging web technologies.
+              </p>
+            </div>
+            
+            <div className="mt-8 grid grid-cols-2 gap-4">
+              <div>
+                <h4 className="text-lg font-medium mb-3 text-white">Frontend</h4>
+                <ul className="space-y-2 text-gray-400">
+                  <li>React / Next.js</li>
+                  <li>TypeScript</li>
+                  <li>WebGL / Three.js</li>
+                  <li>Framer Motion</li>
+                </ul>
               </div>
-              
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                <div>
-                  <h4 className="text-lg font-medium mb-3 text-white">Frontend</h4>
-                  <ul className="space-y-2 text-gray-400">
-                    <li>React / Next.js</li>
-                    <li>TypeScript</li>
-                    <li>WebGL / Three.js</li>
-                    <li>Framer Motion</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-lg font-medium mb-3 text-white">Backend</h4>
-                  <ul className="space-y-2 text-gray-400">
-                    <li>Node.js</li>
-                    <li>GraphQL</li>
-                    <li>PostgreSQL / MongoDB</li>
-                    <li>AWS / Firebase</li>
-                  </ul>
-                </div>
+              <div>
+                <h4 className="text-lg font-medium mb-3 text-white">Backend</h4>
+                <ul className="space-y-2 text-gray-400">
+                  <li>Node.js</li>
+                  <li>GraphQL</li>
+                  <li>PostgreSQL / MongoDB</li>
+                  <li>AWS / Firebase</li>
+                </ul>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -235,44 +213,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section id="blog" className="py-20 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <SectionHeader 
-            title="Latest Articles" 
-            subtitle="Thoughts, insights, and guides on development"
-          />
-          
-          <div className="space-y-6">
-            {blogPosts.map((post, index) => (
-              <BlogPostCard 
-                key={post.id}
-                title={post.title}
-                excerpt={post.excerpt}
-                date={post.date}
-                readTime={post.readTime}
-                image={post.image}
-                url={post.url}
-                index={index}
-              />
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <motion.a
-              href="#"
-              className="inline-flex items-center gap-2 text-accent-cyan hover:text-accent-purple transition-colors"
-              whileHover={{ x: 5 }}
-            >
-              <span>Read All Articles</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </motion.a>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-dark-secondary/50">
         <div className="container mx-auto max-w-5xl">
@@ -298,8 +238,8 @@ const Index = () => {
                 </svg>
               </div>
               <h3 className="text-lg font-medium mb-1">Email</h3>
-              <a href="mailto:hello@omiiam.com" className="text-gray-400 hover:text-accent-cyan transition-colors">
-                hello@omiiam.com
+              <a href="mailto:hello@godsonigoniwari.com" className="text-gray-400 hover:text-accent-cyan transition-colors">
+                hello@godsonigoniwari.com
               </a>
             </motion.div>
             
